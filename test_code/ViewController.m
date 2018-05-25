@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import <stdio.h>
 #import <SystemConfiguration/CaptiveNetwork.h>
-
+#import "AnObjekt.h"
 @interface ViewController ()<UIScrollViewDelegate>
 
 @property (nonatomic, readonly, strong) NSString *str;
@@ -22,6 +22,8 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self copyTest];
+    
 //    self.title = @"12";
 //    NSLog(@"%ld", [self testFib:92]);
 //    printf("%s", [str UTF8String]);
@@ -35,6 +37,19 @@
 //    DeleteChars((char *)[@"They are students." UTF8String], (char *)[@"aeiou" UTF8String]);
 //    [self deleteString:@"aeiou" fromString:@"They are students."];
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)loadTest {
+    AnObjekt *ao = [AnObjekt alloc];UIApplication;UIView;UIViewController;UISlider;
+}
+
+- (void)copyTest {
+    NSObject *ob1 = [[NSObject alloc] init];
+    NSObject *ob2 = [[NSObject alloc] init];
+    NSMutableArray *arr = [NSMutableArray arrayWithObjects:ob1, ob2, nil];
+//    NSMutableArray *arr2 = [arr mutableCopy];
+    NSMutableArray *arr2 = [[NSMutableArray alloc] initWithArray:arr copyItems:YES];
+    printf("end");
 }
 
 - (void)blockTest {
